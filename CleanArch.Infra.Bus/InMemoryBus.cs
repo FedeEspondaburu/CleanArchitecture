@@ -9,7 +9,7 @@ using MediatR;
 
 namespace CleanArch.Infra.Bus
 {
-    public sealed class InMemoryBus : ImediatorHandler
+    public sealed class InMemoryBus : IMediatorHandler
     {
         private readonly IMediator _mediator;
 
