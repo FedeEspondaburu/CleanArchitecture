@@ -1,3 +1,4 @@
+using System.Reflection;
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IoC;
 using CleanArch.Mvc.Data;
@@ -17,6 +18,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<UniversityDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("CleanArchUniversityDB")));
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
 DependencyContainer.RegisterServices(builder.Services);
 
