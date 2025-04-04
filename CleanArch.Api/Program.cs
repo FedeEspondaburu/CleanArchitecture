@@ -1,4 +1,5 @@
 using System.Reflection;
+using CleanArch.Api.Configurations;
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IoC;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +22,8 @@ builder.Services.AddSwaggerGen(cfg =>
 });
 
 DependencyContainer.RegisterServices(builder.Services);
+
+builder.Services.RegisterAutoMapper();
 
 var app = builder.Build();
 
