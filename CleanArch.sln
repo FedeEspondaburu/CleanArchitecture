@@ -22,6 +22,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch.Application", "Cl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch.Infra.IoC", "CleanArch.Infra.IoC\CleanArch.Infra.IoC.csproj", "{D13F8473-F34D-470C-A19D-99B95011E958}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLScripts", "SQLScripts", "{D119CB01-883A-4EDC-84EC-166CBC1ECCAC}"
+	ProjectSection(SolutionItems) = preProject
+		CreateCleanArchUniversityDB.sql = CreateCleanArchUniversityDB.sql
+		CreateCleanArchUniversityIdentityDB.sql = CreateCleanArchUniversityIdentityDB.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
